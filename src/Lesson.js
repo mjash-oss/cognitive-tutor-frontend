@@ -13,7 +13,7 @@ function Lesson() {
     const username = localStorage.getItem('username');
     const fetchPuzzle = async () => {
       try {
-        const res = await fetch(`http://localhost:5000/members?username=${username}`);
+        const res = await fetch(`https://cognitive-tutor.onrender.com/members?username=${username}`);
         if (!res.ok) {
           throw new Error(`HTTP error! status: ${res.status}`);
         }
