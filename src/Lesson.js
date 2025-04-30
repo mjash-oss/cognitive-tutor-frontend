@@ -31,7 +31,7 @@ function Lesson() {
   const checkAnswer = () => {
     const normalized = answer.trim().toLowerCase();
     const isCorrect = correctAnswers.some(ans => ans.trim().toLowerCase() === normalized);
-    setFeedback(isCorrect ? '✅ Correct!' : '❌ Try again.');
+    setFeedback(isCorrect ? '✅ Correct!' : '❌ Try again, click the hint button for a hint.');
   };
 
   if (error) return <div>Error loading puzzle: {error}</div>;
