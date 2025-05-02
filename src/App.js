@@ -5,23 +5,15 @@ import Login from './Login';
 import Register from './Register';
 import Lesson from './Lesson';
 import { useState } from 'react';
-//import Home from './Home';
-//import { AuroraBackgroundDemo } from './AuroraBackgroundDemo'; // <--- ADD THIS
-/*
-function Home() {
-  return (
-    <div className="App">
-      <header class='main-header'></header>
-      <h1>Welcome to Cognitive Tutor! Login for your puzzle of the day.</h1>
-      <nav>
-        <Link to="/login" style={{ marginRight: '10px' }}>Login</Link>
-        <Link to="/register">Register </Link>
-        <Link to="/lesson" style={{ marginRight: '10px' }}>Take a Lesson</Link>
-      </nav>
-    </div>
-  );
+import { HandWrittenTitle } from "./hand-writing-text"
+import * as React from 'react';
+
+function HandWrittenTitleDemo() {
+    return <HandWrittenTitle title="Welcome to Cognitive Tutor!" subtitle="Login / Register for your puzzle of the day" />
 }
-  */
+
+export { HandWrittenTitleDemo }
+
 function Home() {
   return (
     <div className="form">
@@ -45,6 +37,7 @@ function App() {
         <Route path="/login" element={<Login setIsLoggedIn={setIsLoggedIn} />} />
         <Route path="/register" element={<Register />} />
         <Route path="/lesson" element={isLoggedIn ? <Lesson /> : <Login setIsLoggedIn={setIsLoggedIn} />} />
+        <Route path="/hand-writing-text" element={<HandWrittenTitleDemo />} /> 
       </Routes>
     </Router>
   );
