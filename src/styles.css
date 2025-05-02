@@ -19,14 +19,22 @@
   .title {
     color: var(--font-color);
     font-weight: 900;
-    font-size: 20px;
-    margin-bottom: 25px;
+    font-size: 50px;
+    line-height: 1.2;
+    margin: 0;
   }
   
+  .subtitle {
+    color: var(--font-color-sub);
+    font-weight: 600;
+    font-size: 30px;
+    margin-top: 8px; /* <-- Adjust this value to increase or decrease spacing */
+  }  
+
   .title span {
     color: var(--font-color-sub);
     font-weight: 600;
-    font-size: 17px;
+    font-size: 30px;
   }
   
   .input {
