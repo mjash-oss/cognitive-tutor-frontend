@@ -5,14 +5,7 @@ import Login from './Login';
 import Register from './Register';
 import Lesson from './Lesson';
 import { useState } from 'react';
-import { HandWrittenTitle } from "./hand-writing-text"
 import * as React from 'react';
-
-function HandWrittenTitleDemo() {
-    return <HandWrittenTitle title="Welcome to Cognitive Tutor!" subtitle="Login / Register for your puzzle of the day" />
-}
-
-export { HandWrittenTitleDemo }
 
 function Home() {
   return (
