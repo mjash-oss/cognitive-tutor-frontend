@@ -5,7 +5,6 @@ import Login from './Login';
 import Register from './Register';
 import Lesson from './Lesson';
 import { useState } from 'react';
-import * as React from 'react';
 
 function Home() {
   return (
@@ -30,7 +29,6 @@ function App() {
         <Route path="/login" element={<Login setIsLoggedIn={setIsLoggedIn} />} />
         <Route path="/register" element={<Register />} />
         <Route path="/lesson" element={isLoggedIn ? <Lesson /> : <Login setIsLoggedIn={setIsLoggedIn} />} />
-        <Route path="/hand-writing-text" element={<HandWrittenTitleDemo />} /> 
       </Routes>
     </Router>
   );
