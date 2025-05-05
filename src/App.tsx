@@ -24,7 +24,6 @@ function Home(): JSX.Element {
         <span>Login for your daily puzzle.</span>
       </p>
       <div className="login-with">
-        <div className="bg-red-500 text-white p-4">Tailwind is working?</div>
         <Link to="/login" className="bg-blue-500 text-white px-4 py-2 rounded">Login</Link>
         <Link to="/register" className="bg-green-500 text-white px-4 py-2 rounded ml-2">Register</Link>
       </div>
