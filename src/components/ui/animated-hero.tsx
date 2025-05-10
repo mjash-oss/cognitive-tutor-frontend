@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { motion } from "framer-motion";
 import { MoveRight, PhoneCall } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Button } from "./button";
 import { Link } from "react-router-dom";
 
 function Hero() {
