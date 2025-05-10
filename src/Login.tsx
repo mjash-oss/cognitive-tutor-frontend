@@ -22,7 +22,9 @@ const Login: React.FC<LoginProps> = ({ setIsLoggedIn }) => {
 
     if (res.ok) {
       setIsLoggedIn(true); // <<< HERE
+      const data = await res.json(); 
       localStorage.setItem('username', username); // Save username
+      localStorage.setItem('token', data.access_token); 
       navigate('/lesson'); // <<< Move to the lesson page
     } else {
       alert('Login failed.');

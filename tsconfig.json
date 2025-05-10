@@ -10,14 +10,18 @@
     ],
     "compilerOptions": {
       "jsx": "react-jsx",
-      "baseUrl": "./src",
-      "module": "ESNext",
-      "target": "ESNext",
-      "moduleResolution": "bundler",
+      "baseUrl": "./src", //maybe this is just .
+      "module": "esnext",
+      "target": "es6",
+      "moduleResolution": "node",
       "allowImportingTsExtensions": true,
+      "strict": true, 
+      "esModuleInterop": true, 
+      "skipLibCheck": true,
+      "forceConsistentCasingInFileNames": true,
       "noEmit": true, 
       "paths": {
-        "@/*": ["*"]
+        "@/*": ["*"] //./src/*
       }
     }
   }

@@ -14,7 +14,7 @@ const Register: React.FC = () => {
       const res = await fetch('https://cognitive-tutor.onrender.com/api/auth/register', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ username, password }),
+        body: JSON.stringify({ username, email, password }),
       });
 
       const data = await res.json();

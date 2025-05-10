@@ -1,13 +1,19 @@
 import React, { useEffect, useState } from 'react';
 import './styles.css';
 
-function Lesson() {
-  const [puzzle, setPuzzle] = useState(null);
-  const [error, setError] = useState(null);
+interface LessonResponse {
+  message: string;
+  puzzle: string;
+  answers: string[];
+}
+
+const Lesson: React.FC = () => {
+  const [puzzle, setPuzzle] = useState<string | null>(null);
+  const [error, setError] = useState<string | null>(null);
   const [message, setMessage] = useState('');
   const [answer, setAnswer] = useState('');
   const [feedback, setFeedback] = useState('');
-  const [correctAnswers, setCorrectAnswers] = useState([]);
+  const [correctAnswers, setCorrectAnswers] = useState<string[]>([]);
 
   useEffect(() => {
     const username = localStorage.getItem('username');
