@@ -23,7 +23,7 @@ const Register: React.FC = () => {
         alert('Registration successful!');
         navigate('/login'); // redirect to login page
       } else {
-        alert(data.error || 'Registration failed');
+        alert(data.msg || 'Registration failed');
       }
     } catch (err) {
       console.error('Fetch error:', err);
