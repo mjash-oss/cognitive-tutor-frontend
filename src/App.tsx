@@ -26,7 +26,9 @@ function Home(): JSX.Element {
 }
 
 function App(): JSX.Element {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState<boolean>(() => {
+    return !!localStorage.getItem('token'); // Check on initial load
+  });
 
   return (
     <Router>

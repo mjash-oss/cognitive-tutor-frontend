@@ -17,14 +17,15 @@ const Login: React.FC<LoginProps> = ({ setIsLoggedIn }) => {
     const res = await fetch('https://cognitive-tutor.onrender.com/api/auth/login', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
+      credentials: 'include',
       body: JSON.stringify({ username, password }),
     });
 
     if (res.ok) {
       setIsLoggedIn(true); // <<< HERE
       const data = await res.json(); 
-      localStorage.setItem('username', username); // Save username
       localStorage.setItem('token', data.access_token); 
+      localStorage.setItem('username', username); // Save username
       navigate('/lesson'); // <<< Move to the lesson page
     } else {
       alert('Login failed.');
