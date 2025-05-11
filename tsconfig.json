@@ -1,25 +1,7 @@
 {
-    "files": [],
-    "references": [
-      {
-        "path": "./tsconfig.app.json"
-      },
-      {
-        "path": "./tsconfig.node.json"
-      }
-    ],
-    "compilerOptions": {
-      "jsx": "react-jsx",
-      "baseUrl": ".", //maybe this is just .
-      "module": "esnext",
-      "target": "es6",
-      "moduleResolution": "node",
-      "allowImportingTsExtensions": true,
-      "strict": true, 
-      "esModuleInterop": true, 
-      "skipLibCheck": true,
-      "forceConsistentCasingInFileNames": true,
-      "noEmit": true, 
-      }
-    }
-  
+  "files": [],
+  "references": [
+    { "path": "./tsconfig.app.json" },
+    { "path": "./tsconfig.node.json" }
+  ]
+}

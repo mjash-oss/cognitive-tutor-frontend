@@ -19,7 +19,7 @@ const Lesson: React.FC = () => {
     const username = localStorage.getItem('username');
     const fetchPuzzle = async () => {
       try {
-        const res = await fetch(`https://cognitive-tutor.onrender.com/members?username=${username}`);
+        const res = await fetch(`https://cognitive-tutor.onrender.com/api/lessons`);
         if (!res.ok) {
           throw new Error(`HTTP error! status: ${res.status}`);
         }
@@ -27,10 +27,14 @@ const Lesson: React.FC = () => {
         setMessage(data.message);
         setPuzzle(data.puzzle);
         setCorrectAnswers(data.answers || []);
-      } catch (err) {
-        setError(err.message);
+      } catch (err: unknown) {
+        if (err instanceof Error) {
+          setError(err.message);
+        } else { 
+          setError('An unknown error occurred');
       }
     };
+    }; 
     fetchPuzzle();
   }, []);
 
