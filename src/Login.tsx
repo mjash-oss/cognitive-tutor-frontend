@@ -17,7 +17,6 @@ const Login: React.FC<LoginProps> = ({ setIsLoggedIn }) => {
     const res = await fetch('https://cognitive-tutor.onrender.com/api/auth/login', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      credentials: 'include',
       body: JSON.stringify({ username, password }),
     });
 

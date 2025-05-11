@@ -28,8 +28,7 @@ const Lesson: React.FC = () => {
   headers: {
     'Content-Type': 'application/json',
     'Authorization': `Bearer ${token}`,
-  },
-  credentials: 'include', // required for cross-origin with credentials
+  }, 
 });
         if (!res.ok) {
           throw new Error(`HTTP error! status: ${res.status}`);
