@@ -17,9 +17,17 @@ const Lesson: React.FC = () => {
 
   useEffect(() => {
     const username = localStorage.getItem('username');
+    const token = localStorage.getItem('token');
     const fetchPuzzle = async () => {
       try {
-        const res = await fetch(`https://cognitive-tutor.onrender.com/api/lessons`);
+        const res = await fetch(`https://cognitive-tutor.onrender.com/api/lessons/`, {
+  method: 'GET',
+  headers: {
+    'Content-Type': 'application/json',
+    'Authorization': `Bearer ${token}`,
+  },
+  credentials: 'include', // required for cross-origin with credentials
+});
         if (!res.ok) {
           throw new Error(`HTTP error! status: ${res.status}`);
         }
