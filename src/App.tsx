@@ -9,7 +9,7 @@ import { Hero } from "@/components/ui/animated-hero";
 
 function HeroDemo(): JSX.Element {
   return (
-    <div className="block">
+    <div className="min-h-screen flex items-center justify-center">
       <Hero />
     </div>
   );

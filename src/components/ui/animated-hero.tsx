@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { motion } from "framer-motion";
-import { MoveRight, PhoneCall } from "lucide-react";
-import { Button } from "./button";
+import { MoveRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
 function Hero() {
@@ -23,8 +23,8 @@ function Hero() {
   }, [titleNumber, titles]);
 
   return (
-    <div className="w-full">
-      <div className="container mx-auto">
+    <section className="relative w-full overflow-hidden py-24 md:py-32 lg:py-40">
+      <div className="container mx-auto flex flex-col items-center justify-center gap-8 text-center">
         <div className="flex gap-8 py-20 lg:py-40 items-center justify-center flex-col">
           <div>
             <Button variant="secondary" size="sm" className="gap-4">
@@ -79,7 +79,7 @@ function Hero() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 
