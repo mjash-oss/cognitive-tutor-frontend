@@ -18,6 +18,9 @@ const Lesson: React.FC = () => {
   useEffect(() => {
     const username = localStorage.getItem('username');
     const token = localStorage.getItem('token');
+
+    console.log("Token being sent to API:", token);
+
     const fetchPuzzle = async () => {
       try {
         const res = await fetch(`https://cognitive-tutor.onrender.com/api/lessons/`, {
